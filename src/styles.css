@@ -1,0 +1,324 @@
+/* Palette taken from Bánh Bánh's own material:
+   paper + ink + terracotta from their printed menu, cream from the wordmark,
+   olive from their badge, and the rest from the room itself. */
+:root {
+  --paper: #fff6ed;
+  --paper-2: #f7eadb;
+  --ink: #521e10;
+  --ink-soft: #7a4a37;
+  --terracotta: #cc542d;
+  --cream: #fdfcdd;
+  --olive: #363722;
+  --walnut: #73472b;
+  --walnut-deep: #2a150b;
+  --corridor: #150b06;
+  --ochre: #c2850c;
+  --ochre-light: #e2b04a;
+  --concrete: #a09e96;
+  --concrete-light: #d9d6cd;
+  --glass: #e6ece1;
+  --shrine: #f2c6b6;
+  --shrine-deep: #d4917f;
+  --fan: #5fae9e;
+  --teal-deep: #2f6a60;
+
+  --display: 'Oswald Variable', 'Oswald', 'Arial Narrow', sans-serif;
+  --serif: 'Crimson Pro Variable', 'Crimson Pro', Georgia, serif;
+
+  --gutter: clamp(1.1rem, 4vw, 3rem);
+  --measure: 34rem;
+  --header-h: 3.75rem;
+  --ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.1875rem;
+  line-height: 1.45;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Type, following the printed menu ---------- */
+
+.vi-head {
+  font-family: var(--display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.eyebrow {
+  font-family: var(--display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  color: var(--terracotta);
+  margin: 0;
+}
+
+.gloss {
+  display: block;
+  font-family: var(--serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-weight: 400;
+  margin-top: 0.15rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 7vw, 4.4rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+p {
+  margin: 0 0 0.9em;
+}
+
+.lede {
+  font-size: clamp(1.3rem, 3.2vw, 1.65rem);
+  line-height: 1.3;
+  max-width: 30ch;
+}
+
+.small {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  --btn-bg: var(--ink);
+  --btn-fg: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 3rem;
+  padding: 0.7rem 1.35rem 0.75rem;
+  border: 1px solid var(--btn-bg);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.btn:hover {
+  --btn-bg: var(--terracotta);
+}
+
+.btn--cream {
+  --btn-bg: var(--cream);
+  --btn-fg: var(--walnut-deep);
+}
+
+.btn--cream:hover {
+  --btn-bg: var(--ochre-light);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--btn-bg);
+}
+
+.btn--ghost:hover {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.btn--ghost-light {
+  --btn-bg: var(--cream);
+  --btn-fg: var(--walnut-deep);
+  background: transparent;
+  color: var(--cream);
+}
+
+.btn--ghost-light:hover {
+  background: var(--cream);
+  color: var(--walnut-deep);
+}
+
+.btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.link-arrow {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1em;
+}
+
+/* ---------- Status dot ---------- */
+
+.status {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55em;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+}
+
+.status__dot {
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--concrete);
+  flex: none;
+  transform: translateY(-0.05em);
+}
+
+.status--open .status__dot {
+  background: var(--fan);
+  box-shadow: 0 0 0 0.25em rgb(95 174 158 / 0.3);
+}
+
+.status--later .status__dot {
+  background: var(--ochre-light);
+}
+
+.status__detail {
+  white-space: nowrap;
+  font-family: var(--serif);
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.8;
+  font-size: 1.05rem;
+}
+
+/* ---------- Page shell ---------- */
+
+.page {
+  padding-top: var(--header-h);
+  min-height: 100svh;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: clamp(4rem, 12vw, 8rem) 0;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.credit {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* Glass block tile, used for the hours wall and as a texture */
+.glass-block {
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 50%, rgb(255 255 255 / 0.55), transparent 70%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.35), transparent 40%, rgb(0 0 0 / 0.06) 60%, rgb(255 255 255 / 0.25)),
+    var(--glass);
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.6),
+    inset 0 0 0 4px rgb(0 0 0 / 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

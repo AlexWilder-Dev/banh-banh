@@ -1,0 +1,48 @@
+.athome-page .page-head--dark {
+  background: var(--olive);
+}
+
+.athome-options {
+  background: var(--olive);
+  color: var(--cream);
+  padding-bottom: 4rem;
+}
+
+.athome-options .eyebrow {
+  color: var(--ochre-light);
+}
+
+.athome-options__grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.athome-card {
+  border: 1px solid rgb(253 252 221 / 0.25);
+  padding: 1.6rem 1.4rem;
+}
+
+.athome-card h2 {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  margin: 0.4rem 0 0.8rem;
+}
+
+@media (min-width: 760px) {
+  .athome-options__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.athome-photo {
+  margin: 0;
+}
+
+.athome-photo img {
+  aspect-ratio: 16 / 9;
+  max-height: 80vh;
+}
+
+.athome-foot {
+  padding-top: 2rem;
+}

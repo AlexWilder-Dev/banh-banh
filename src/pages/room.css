@@ -1,0 +1,213 @@
+.room-page .page-head {
+  padding-bottom: 2rem;
+}
+
+.room-walk {
+  background: var(--corridor);
+  color: var(--cream);
+  padding-bottom: 4rem;
+}
+
+.room-walk__quote {
+  margin: 0 0 3rem;
+  max-width: 34rem;
+}
+
+.room-stop {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  border-top: 1px solid rgb(253 252 221 / 0.1);
+}
+
+.room-stop__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.room-stop__num {
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--ochre-light);
+}
+
+.room-stop__text h2 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+.room-stop__text p {
+  max-width: 34rem;
+}
+
+.room-stop__text .link-arrow {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.room-stop__visual {
+  margin: 0;
+}
+
+/* corridor: a strip of light at the end of a dark passage */
+.room-corridor {
+  height: 18rem;
+  background:
+    linear-gradient(90deg, #120905 0 30%, transparent 30% 70%, #120905 70%),
+    linear-gradient(#1d0f08, #2a160b);
+  position: relative;
+}
+
+.room-corridor span {
+  position: absolute;
+  left: 45%;
+  right: 45%;
+  top: 22%;
+  bottom: 30%;
+  background: linear-gradient(var(--shrine), var(--shrine-deep));
+  box-shadow: 0 0 60px 10px rgb(242 198 182 / 0.25);
+}
+
+.room-stop--shrine {
+  background: linear-gradient(180deg, var(--corridor), #3a1e14);
+}
+
+.room-stop--shrine .room-stop__num {
+  color: var(--shrine);
+}
+
+.room-stop__shrine svg {
+  width: 100%;
+  max-width: 22rem;
+  aspect-ratio: 5 / 8;
+  height: auto;
+}
+
+.room-stop--dining {
+  background: #2a1a0e;
+}
+
+.room-stop__gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.6rem;
+}
+
+.room-g {
+  margin: 0;
+}
+
+.room-g--a {
+  grid-column: 1 / 5;
+}
+
+.room-g--a img {
+  aspect-ratio: 6 / 7;
+}
+
+.room-g--b {
+  grid-column: 3 / 7;
+  margin-top: -3rem;
+}
+
+.room-g--b img {
+  aspect-ratio: 4 / 3;
+  border-top-left-radius: 40% 50%;
+}
+
+.room-g--c {
+  grid-column: 1 / 5;
+}
+
+.room-g--c img {
+  aspect-ratio: 10 / 7;
+}
+
+.room-g--d {
+  grid-column: 5 / 7;
+  align-self: end;
+}
+
+.room-g--d img {
+  aspect-ratio: 2 / 3;
+}
+
+.room-stop--front {
+  background: linear-gradient(180deg, #2a1a0e, #3b2018);
+}
+
+.room-stop__fan {
+  margin-top: 1.4rem;
+}
+
+.room-stop__photo img {
+  aspect-ratio: 3 / 4;
+  max-height: 80vh;
+}
+
+.room-stop--groups .room-stop__photo img {
+  aspect-ratio: 4 / 5;
+}
+
+@media (min-width: 900px) {
+  .room-stop__grid {
+    grid-template-columns: 4rem 1fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .room-stop__text {
+    position: sticky;
+    top: calc(var(--header-h) + 3rem);
+  }
+  .room-stop__shrine {
+    justify-self: center;
+  }
+}
+
+.room-credits {
+  background: var(--paper);
+  padding: clamp(4rem, 10vw, 6rem) 0;
+}
+
+.room-credits h2 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  margin-top: 0.5rem;
+}
+
+.room-credits__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.room-credits dl {
+  margin: 0;
+}
+
+.room-credits dl div {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgb(82 30 16 / 0.14);
+}
+
+.room-credits dt {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  color: var(--terracotta);
+}
+
+.room-credits dd {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .room-credits__grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+  }
+  .room-credits dl div {
+    grid-template-columns: 14rem 1fr;
+  }
+}

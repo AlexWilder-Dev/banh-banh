@@ -1,0 +1,116 @@
+.visit {
+  background: var(--paper);
+  padding: 0 0 clamp(4rem, 10vw, 6rem);
+}
+
+.visit__grid {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 900px) {
+  .visit__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.visit-venue h2 {
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.visit-venue address {
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+}
+
+.visit-venue h3 {
+  margin: 1.8rem 0 0.4rem;
+}
+
+.visit-maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 0;
+}
+
+.visit-maps .btn {
+  min-height: 2.6rem;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.9rem;
+}
+
+.visit-tip {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.visit-hours {
+  margin: 0;
+  max-width: 22rem;
+}
+
+.visit-hours div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgb(82 30 16 / 0.14);
+}
+
+.visit-hours dd {
+  margin: 0;
+}
+
+.visit-cta {
+  margin-top: 1.8rem;
+}
+
+.visit-venue--little h2 {
+  color: var(--terracotta);
+}
+
+.visit-contact {
+  background: var(--walnut-deep);
+  color: var(--cream);
+  padding: clamp(3.5rem, 8vw, 5rem) 0;
+}
+
+.visit-contact h2 {
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  margin-bottom: 1.5rem;
+}
+
+.visit-contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.visit-contact li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+}
+
+.visit-contact .eyebrow {
+  color: var(--ochre-light);
+}
+
+@media (min-width: 900px) {
+  .visit-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .visit-contact ul {
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: 3rem;
+  }
+}

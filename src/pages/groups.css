@@ -1,0 +1,141 @@
+.groups-options {
+  padding: 0 0 clamp(4rem, 10vw, 6rem);
+  background: var(--paper);
+}
+
+.groups-options__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.groups-options__photo {
+  margin: 0;
+}
+
+.groups-options__photo img {
+  aspect-ratio: 4 / 5;
+  border-top-left-radius: 50% 22%;
+}
+
+.groups-options__cards {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.groups-card {
+  padding: 1.5rem 1.4rem 1.6rem;
+  background: var(--paper-2);
+}
+
+.groups-card h2 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  margin: 0.4rem 0 0.8rem;
+}
+
+.groups-card--xmas {
+  background: var(--shrine);
+}
+
+.groups-card--xmas .eyebrow {
+  color: var(--ink);
+}
+
+@media (min-width: 900px) {
+  .groups-options__grid {
+    grid-template-columns: 0.9fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .groups-options__photo {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+
+.groups-met {
+  background: var(--walnut-deep);
+  color: var(--cream);
+  padding: clamp(4rem, 10vw, 6rem) 0;
+}
+
+.groups-met .eyebrow {
+  color: var(--ochre-light);
+}
+
+.groups-met .gloss {
+  color: var(--cream);
+  opacity: 0.8;
+}
+
+.groups-met h2 {
+  font-size: clamp(2.4rem, 8vw, 4.2rem);
+  margin-top: 0.6rem;
+}
+
+.groups-met__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.groups-met__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.groups-met__list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgb(253 252 221 / 0.15);
+  font-size: 1.15rem;
+}
+
+.groups-met__list li span:first-child {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.groups-met__list .groups-met__note {
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+.groups-met__list li:last-child {
+  border: 0;
+  padding-top: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .groups-met__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+
+.groups-enquiry {
+  background: var(--paper-2);
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  scroll-margin-top: var(--header-h);
+}
+
+.groups-enquiry h2 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.groups-enquiry__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .groups-enquiry__grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+  }
+}

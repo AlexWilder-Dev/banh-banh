@@ -1,0 +1,144 @@
+/* Little Bánh Bánh is daylight: white tile, pale glass block, terracotta print */
+.little-page .page-head {
+  background-color: #f8f7f1;
+  background-image:
+    linear-gradient(rgb(160 158 150 / 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(160 158 150 / 0.16) 1px, transparent 1px);
+  background-size: 2.4rem 2.4rem;
+}
+
+.little-page .page-head__title {
+  color: var(--terracotta);
+}
+
+.little-head__aside {
+  background: #f8f7f1;
+  padding: 1rem 0;
+}
+
+.little-head__where {
+  margin: 0.6rem 0;
+}
+
+.little-head__maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+
+.little-photo {
+  margin: 0;
+}
+
+.little-photo img {
+  aspect-ratio: 3 / 2;
+  max-height: 85vh;
+}
+
+.little-menu {
+  background: #fff;
+  padding: clamp(3.5rem, 9vw, 6rem) 0;
+  color: var(--terracotta);
+}
+
+.little-menu__head {
+  display: grid;
+  gap: 0.8rem;
+  justify-items: start;
+  margin-bottom: 3rem;
+  color: var(--ink);
+}
+
+.little-menu__head h2 {
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  color: var(--terracotta);
+}
+
+.little-menu__head p {
+  margin: 0;
+}
+
+.little-menu__grid {
+  display: grid;
+  gap: 2.8rem 4rem;
+}
+
+@media (min-width: 900px) {
+  .little-menu__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.little-section h3 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  text-align: center;
+}
+
+.little-section__intro {
+  text-align: center;
+  max-width: 26rem;
+  margin: 0.4rem auto 1.3rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.little-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.little-section li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.85rem;
+}
+
+.little-item__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.little-item__opts {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.little-item__vi {
+  font-size: 1rem;
+}
+
+.little-menu__note {
+  margin-top: 2rem;
+  color: var(--ink);
+  opacity: 0.6;
+}
+
+.little-catering {
+  background: var(--glass);
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  scroll-margin-top: var(--header-h);
+}
+
+.little-catering h2 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.little-catering__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .little-catering__grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+  }
+}

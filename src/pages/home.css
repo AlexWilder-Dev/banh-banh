@@ -1,0 +1,370 @@
+/* ---------- Press line ---------- */
+
+.press-line {
+  margin: 1.5rem 0 0;
+  max-width: 30rem;
+}
+
+.press-line blockquote {
+  margin: 0;
+}
+
+.press-line blockquote p {
+  margin: 0 0 0.3rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.press-line figcaption {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
+.press-line figcaption a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* ---------- Cơm nhà ---------- */
+
+.home-comnha {
+  background: var(--paper);
+}
+
+.home-comnha__grid {
+  display: grid;
+  gap: 3.5rem;
+}
+
+.home-comnha__statement {
+  font-size: clamp(1.75rem, 5.2vw, 3.3rem);
+  line-height: 1.12;
+  margin: 1.2rem 0 0;
+  max-width: 20ch;
+  letter-spacing: -0.005em;
+}
+
+.home-comnha__statement em {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.home-nopho {
+  border-top: 3px solid var(--terracotta);
+  padding-top: 1.4rem;
+  max-width: 28rem;
+}
+
+.home-nopho__title {
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+.home-nopho__title span:last-child {
+  display: block;
+  color: var(--terracotta);
+}
+
+.home-nopho__note {
+  margin-top: 1.2rem;
+  opacity: 0.85;
+}
+
+@media (min-width: 900px) {
+  .home-comnha__grid {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: end;
+    gap: 5rem;
+  }
+}
+
+/* ---------- Mẹt ---------- */
+
+.home-met {
+  background: var(--walnut-deep);
+  color: var(--cream);
+}
+
+.home-met .eyebrow {
+  color: var(--ochre-light);
+}
+
+.home-met .gloss {
+  color: var(--cream);
+  opacity: 0.8;
+}
+
+.home-met__head {
+  margin-bottom: 2.5rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.home-met__head h2 {
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+}
+
+.home-met__press {
+  margin-top: 3rem;
+}
+
+/* ---------- Room ---------- */
+
+.home-room {
+  background: var(--paper);
+  padding: clamp(4rem, 10vw, 7rem) 0;
+}
+
+.home-room__grid {
+  display: grid;
+  gap: 2rem;
+  padding: 0 var(--gutter);
+  max-width: 84rem;
+  margin: 0 auto;
+}
+
+.home-room__long {
+  margin: 0 calc(var(--gutter) * -1);
+}
+
+.home-room__long img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  border-top-right-radius: 38% 50%;
+}
+
+.home-room__long .credit {
+  padding: 0 var(--gutter);
+}
+
+.home-room__text h2 {
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  margin: 0.6rem 0 1.1rem;
+}
+
+.home-room__text .link-arrow {
+  display: inline-block;
+  margin-top: 1.6rem;
+}
+
+.home-room__screen {
+  margin: 0;
+  width: 62%;
+  justify-self: end;
+}
+
+.home-room__screen img {
+  aspect-ratio: 2 / 3;
+}
+
+@media (min-width: 900px) {
+  .home-room__grid {
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 4rem;
+    row-gap: 2rem;
+  }
+  .home-room__long {
+    margin: 0;
+    grid-row: 1 / 3;
+    align-self: start;
+  }
+  .home-room__long .credit {
+    padding: 0;
+  }
+  .home-room__text {
+    align-self: end;
+  }
+  .home-room__screen {
+    width: 58%;
+    justify-self: start;
+  }
+}
+
+/* ---------- Week ---------- */
+
+.home-week {
+  background: #1a110b;
+  color: var(--cream);
+}
+
+.home-week .eyebrow {
+  color: var(--ochre-light);
+}
+
+.home-week__head {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.home-week__head h2 {
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+}
+
+.home-week__ctas {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+/* ---------- Groups ---------- */
+
+.home-groups {
+  display: grid;
+  background: var(--paper-2);
+}
+
+.home-groups__photo {
+  margin: 0;
+  min-height: 70vw;
+  max-height: 90vh;
+}
+
+.home-groups__photo picture,
+.home-groups__photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-groups__text {
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter);
+  max-width: 40rem;
+}
+
+.home-groups__text h2 {
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  margin: 0.6rem 0 1.2rem;
+}
+
+.home-groups__xmas {
+  margin: 1.8rem 0;
+  padding: 1rem 1.1rem;
+  background: var(--paper);
+  border-left: 3px solid var(--terracotta);
+}
+
+.home-groups__xmas p:last-child {
+  margin: 0.3rem 0 0;
+}
+
+.home-groups__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+@media (min-width: 900px) {
+  .home-groups {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .home-groups__photo {
+    height: 100%;
+    min-height: 44rem;
+    max-height: none;
+  }
+  .home-groups__photo img {
+    border-top-right-radius: 0 0;
+  }
+}
+
+/* ---------- Little Bánh Bánh, in daylight ---------- */
+
+.home-little {
+  padding: clamp(4rem, 10vw, 7rem) 0;
+  background-color: #f8f7f1;
+  background-image:
+    linear-gradient(rgb(160 158 150 / 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(160 158 150 / 0.18) 1px, transparent 1px);
+  background-size: 2.4rem 2.4rem;
+}
+
+.home-little__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.home-little__text {
+  background: #f8f7f1;
+  padding: 0.5rem 0;
+}
+
+.home-little__text h2 {
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.home-little__where {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.home-little .status {
+  margin-bottom: 1.2rem;
+}
+
+.home-little__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+}
+
+.home-little__photo {
+  margin: 0;
+}
+
+.home-little__photo img {
+  aspect-ratio: 3 / 2;
+}
+
+@media (min-width: 900px) {
+  .home-little__grid {
+    grid-template-columns: 1fr 1.25fr;
+    align-items: center;
+    gap: 4rem;
+  }
+  .home-little__text {
+    padding: 2rem 2rem 2rem 0;
+  }
+}
+
+/* ---------- At home ---------- */
+
+.home-athome {
+  background: var(--olive);
+  color: var(--cream);
+  padding: 3rem 0;
+}
+
+.home-athome .eyebrow {
+  color: var(--ochre-light);
+}
+
+.home-athome__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.home-athome__line {
+  font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+  line-height: 1.15;
+  margin: 0.4rem 0 0.3rem;
+}
+
+.home-athome .small {
+  margin: 0;
+  opacity: 0.75;
+}
