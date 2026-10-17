@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Entrance } from '../components/Entrance'
 import { MetTable } from '../components/MetTable'
-import { WeekWall } from '../components/WeekWall'
+import { HoursList } from '../components/HoursList'
 import { Photo } from '../components/Photo'
 import { PressLine } from '../components/PressLine'
 import { Reveal } from '../components/Reveal'
@@ -93,21 +93,21 @@ export default function Home() {
 
       {/* When we're open */}
       <section className="home-week section" data-header="dark">
-        <div className="wrap">
+        <div className="wrap home-week__grid">
           <header className="home-week__head">
             <p className="eyebrow">Brixton hours</p>
             <h2>Open tonight?</h2>
             <StatusLine venue={brixton.hours} tone="dark" />
+            <div className="home-week__ctas">
+              <Link to="/book" className="btn btn--cream">
+                Book a table
+              </Link>
+              <Link to="/visit" className="btn btn--ghost-light">
+                Getting here
+              </Link>
+            </div>
           </header>
-          <WeekWall hours={brixton.hours} />
-          <div className="home-week__ctas">
-            <Link to="/book" className="btn btn--cream">
-              Book a table
-            </Link>
-            <Link to="/visit" className="btn btn--ghost-light">
-              Getting here
-            </Link>
-          </div>
+          <HoursList hours={brixton.hours} />
         </div>
       </section>
 

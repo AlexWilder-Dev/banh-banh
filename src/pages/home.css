@@ -196,10 +196,15 @@
   color: var(--ochre-light);
 }
 
+.home-week__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
 .home-week__head {
   display: grid;
   gap: 0.7rem;
-  margin-bottom: 2.5rem;
+  align-content: start;
 }
 
 .home-week__head h2 {
@@ -207,10 +212,52 @@
 }
 
 .home-week__ctas {
-  margin-top: 2.5rem;
+  margin-top: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.hours-list {
+  margin: 0;
+  max-width: 28rem;
+  width: 100%;
+}
+
+.hours-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgb(253 252 221 / 0.14);
+}
+
+.hours-list dt {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+}
+
+.hours-list dd {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.hours-list .is-today dt,
+.hours-list .is-today dd {
+  color: var(--ochre-light);
+}
+
+@media (min-width: 900px) {
+  .home-week__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .hours-list {
+    justify-self: end;
+  }
 }
 
 /* ---------- Groups ---------- */

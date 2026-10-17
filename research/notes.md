@@ -149,7 +149,6 @@ They don't use superlatives or exclamation marks. Their badge says **EST. 2014**
   - They don't use red-and-gold or anything else "oriental".
 - **Structure:** the home page follows the room. A dim corridor opens onto the lit pink shrine, and then the dining room widens out as you scroll.
   - The mẹt is shown from above, as a plan of the table, and leads into booking for your party size.
-  - Opening hours become a wall of glass blocks that light up when they're open.
   - Little Bánh Bánh switches to daylight: white tile and pale glass block, as in its photo.
 - **Photography:**
   - Their own photos are used wherever they exist.
