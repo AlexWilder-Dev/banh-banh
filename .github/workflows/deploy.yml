@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/dazzling-mendel-12hcku]
   workflow_dispatch:
 
 permissions:
